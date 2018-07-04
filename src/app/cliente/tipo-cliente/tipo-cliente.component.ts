@@ -9,7 +9,6 @@ export class TipoClienteComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

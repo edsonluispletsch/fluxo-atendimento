@@ -1,5 +1,9 @@
 <p>
-  cadastro-cliente works!
+  {{ cliente }}
   <app-tipo-pessoa></app-tipo-pessoa>
   <app-tipo-cliente></app-tipo-cliente>
+  <img [src]="imagem" alt="Teste" [hidden]="imagem == null"/>
+  <button (click)="LevantarNeymar()">Levantar o Neymar</button>
+  <button (click)="DerrubarNeymar()">Derrubar o Neymar</button>
+  <input type="text" [(ngModel)]="imagem" />
 </p>
