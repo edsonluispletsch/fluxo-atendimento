@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pessoa } from '../pessoa';
+import { TipoPessoa } from '../tipo-pessoa';
 
 @Component({
   selector: 'app-cadastro-cliente',
@@ -10,6 +12,7 @@ export class CadastroClienteComponent implements OnInit {
   cliente: string = "Proprietário";
   contador: number = 0;
   imagem: string;
+  pessoa: Pessoa;
   
   constructor() { }
 
@@ -28,6 +31,12 @@ export class CadastroClienteComponent implements OnInit {
         self.imagem = "Imagem/NeymarCaido.jpg";
       }
     }, 2000);
+
+    if (this.pessoa == null){
+      this.pessoa = new Pessoa();
+    this.pessoa.nomePessoa = 'Pletsch';
+    this.pessoa.tipoPessoa = TipoPessoa.Juidica;
+    }
   }    
 
   LevantarNeymar() : void {

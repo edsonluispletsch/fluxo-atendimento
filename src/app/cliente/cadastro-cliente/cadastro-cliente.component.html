@@ -1,9 +1,12 @@
 <p>
   {{ cliente }}
-  <app-tipo-pessoa></app-tipo-pessoa>
+  <app-tipo-pessoa [(tipoPessoa)]="pessoa.tipoPessoa"></app-tipo-pessoa>
   <app-tipo-cliente></app-tipo-cliente>
-  <img [src]="imagem" alt="Teste" [hidden]="imagem == null"/>
+  <!-- <img [src]="imagem" alt="Teste" [hidden]="imagem == null"/>
   <button (click)="LevantarNeymar()">Levantar o Neymar</button>
   <button (click)="DerrubarNeymar()">Derrubar o Neymar</button>
-  <input type="text" [(ngModel)]="imagem" />
+  <input type="text" [(ngModel)]="imagem" /> -->
+  <input type="text" [(ngModel)]="pessoa.nomePessoa" />
+  <input type="number" [(ngModel)]="pessoa.tipoPessoa" />  
 </p>
+{{ pessoa | json }}

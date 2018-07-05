@@ -1,6 +1,7 @@
 <fieldset>
   <legend>Tipo de Pessoa</legend>
-  <label><input type="radio" name="rdoTipoPessoa" />Física</label>
-  <label><input type="radio" name="rdoTipoPessoa" />Jurídica</label>
-  <label><input type="radio" name="rdoTipoPessoa" />Outros</label>    
+  <label><input type="radio" name="rdoTipoPessoa" [value]="1" [(ngModel)]="tipoPessoa"/>Física</label>
+  <label><input type="radio" name="rdoTipoPessoa" [value]="2" [(ngModel)]="tipoPessoa"/>Jurídica</label>
+  <label><input type="radio" name="rdoTipoPessoa" [value]="3" [(ngModel)]="tipoPessoa"/>Outros</label>    
 </fieldset>
+{{tipoPessoa}}
