@@ -7,13 +7,17 @@ import { ClienteService } from './cliente.service';
 import { TipoPessoaComponent } from './cliente/tipo-pessoa/tipo-pessoa.component';
 import { TipoClienteComponent } from './cliente/tipo-cliente/tipo-cliente.component';
 import {FormsModule} from '@angular/forms';
+import { LxTextoComponent } from './lx-texto/lx-texto.component';
+import { LxModalComponent } from './lx-modal/lx-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroClienteComponent,
     TipoPessoaComponent,
-    TipoClienteComponent
+    TipoClienteComponent,
+    LxTextoComponent,
+    LxModalComponent
   ],
   imports: [
     BrowserModule,

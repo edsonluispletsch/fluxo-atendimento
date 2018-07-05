@@ -11,6 +11,12 @@ export class TipoPessoaComponent implements OnInit {
   @Input() tipoPessoa: TipoPessoa;
   @Output() tipoPessoaChange: EventEmitter<TipoPessoa> = new EventEmitter<TipoPessoa>();
 
+  listaTiposPessoa = [
+    {codigo : TipoPessoa.Fisica, descricao: "Física"},
+    {codigo : TipoPessoa.Juidica, descricao: "Jurídica"},
+    {codigo : TipoPessoa.Outros, descricao: "Outros"} 
+  ]
+
   constructor() { }
 
   ngOnInit() {

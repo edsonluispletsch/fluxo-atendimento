@@ -1,12 +1,49 @@
-<p>
-  {{ cliente }}
-  <app-tipo-pessoa [(tipoPessoa)]="pessoa.tipoPessoa"></app-tipo-pessoa>
-  <app-tipo-cliente></app-tipo-cliente>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <fieldset>
+        <legend>Cliente</legend>
+        <span *ngIf="pessoa.tipoPessoa == 1">{{ cliente }}</span>
+      </fieldset>
+    </div>
+    <div class="col">
+      <fieldset>
+        <legend>Tipo Pessoa</legend>
+        <app-tipo-pessoa [(tipoPessoa)]="pessoa.tipoPessoa"></app-tipo-pessoa>
+      </fieldset>
+    </div>
+    <div class="col">
+        <legend>Tipo de Cliente</legend>      
+        <app-tipo-cliente></app-tipo-cliente>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <label>
+        Código do cliente
+        <input type="number" class="form-control"/>
+      </label>  
+    </div>
+    <div class="col-9">
+      <lx-texto 
+        [(texto)]="pessoa.nomePessoa"
+        label="Nome do cliente">
+      </lx-texto>
+    </div>
+    <div class="col-1" style="font-size: 60px">
+      <lx-modal
+        titulo="Opções" 
+        icone="icon-lx-user-down">
+        Teste do ng-content
+      </lx-modal>
+    </div>
+  </div>
+</div>
+
   <!-- <img [src]="imagem" alt="Teste" [hidden]="imagem == null"/>
   <button (click)="LevantarNeymar()">Levantar o Neymar</button>
   <button (click)="DerrubarNeymar()">Derrubar o Neymar</button>
   <input type="text" [(ngModel)]="imagem" /> -->
   <input type="text" [(ngModel)]="pessoa.nomePessoa" />
   <input type="number" [(ngModel)]="pessoa.tipoPessoa" />  
-</p>
 {{ pessoa | json }}

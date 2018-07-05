@@ -21,13 +21,17 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/Imagem"
+              "src/Imagem",
+              "src/fonts"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "src/linx-icons.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
