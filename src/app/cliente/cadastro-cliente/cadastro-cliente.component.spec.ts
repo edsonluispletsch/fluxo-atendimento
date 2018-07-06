@@ -22,4 +22,8 @@ describe('CadastroClienteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('tem pessoas', () => {
+      expect(component.pessoas).toBeGreaterThanOrEqual(0);
+  })
 });

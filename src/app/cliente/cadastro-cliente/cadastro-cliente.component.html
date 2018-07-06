@@ -37,6 +37,26 @@
         Teste do ng-content
       </lx-modal>
     </div>
+    <div lxCol>
+      <lx-progress 
+        [valueNow]="porcentagemProgresso"
+        fecharAoConcluir="true"></lx-progress>
+        <button class="btn btn-primary" (click)="adicionarCliente()">Adicionar cliente</button>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Tipo de pessoa</th>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let auxPessoa of pessoas">
+            <td>{{auxPessoa.tipoPessoa}}</td>
+            <td>{{auxPessoa.nomePessoa}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
